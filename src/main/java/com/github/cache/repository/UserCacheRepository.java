@@ -1,6 +1,6 @@
 package com.github.cache.repository;
 
-import com.github.cache.pojo.UserCacheDTO;
+import com.github.cache.pojo.UserCacheDO;
 import org.springframework.data.repository.PagingAndSortingRepository;
 
 /**
@@ -15,10 +15,21 @@ import org.springframework.data.repository.PagingAndSortingRepository;
  */
 
 
-public interface UserCacheRepository extends PagingAndSortingRepository<UserCacheDTO, String> {
+public interface UserCacheRepository extends PagingAndSortingRepository<UserCacheDO, String> {
 
-    UserCacheDTO findUserCacheDTOByNameIs(String name);
+    /**
+     * 根据用户名查询单个用户
+     *
+     * @param name 用户名
+     * @return UserCacheDO
+     */
+    UserCacheDO findUserCacheDOByNameIs(String name);
 
-    void deleteUserCacheDTOByNameIs(String name);
+    /**
+     * 删除单个用户
+     *
+     * @param name 用户名
+     */
+    void deleteUserCacheDOByNameIs(String name);
 
 }

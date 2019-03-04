@@ -23,8 +23,8 @@ import java.io.Serializable;
 
 @Setter
 @Getter
-@Document(collection = "UserCacheDTO")
-public class UserCacheDTO implements Serializable {
+@Document(collection = "UserCacheDO")
+public class UserCacheDO implements Serializable {
 
     private static final long serialVersionUID = -8116446033357952120L;
 
